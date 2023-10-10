@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck5rplmdj6345"]
+
+[ext_resource type="PackedScene" uid="uid://b2tw5fxev8kha" path="res://game/player.tscn" id="1_05xq7"]
+[ext_resource type="Script" path="res://game/fps.gd" id="1_bepwx"]
+
+[node name="Main" type="Node2D"]
+
+[node name="FPS" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_bepwx")
+
+[node name="Player" parent="." instance=ExtResource("1_05xq7")]
+position = Vector2(244, 192)
