@@ -1,6 +1,7 @@
 #include "register_types.h"
 
 #include <player.h>
+#include <enemy.h>
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
@@ -15,6 +16,7 @@ void initialize_module(ModuleInitializationLevel p_level) {
     }
 
     ClassDB::register_class<Player>();
+    ClassDB::register_class<Enemy>();
 }
 
 void uninitialize_module(ModuleInitializationLevel p_level) {

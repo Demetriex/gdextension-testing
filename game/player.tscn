@@ -5,6 +5,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_tj80p"]
 
 [node name="Player" type="Player"]
+collision_layer = 0
+collision_mask = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
@@ -13,3 +15,6 @@ texture = ExtResource("1_vv2o5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("CircleShape2D_tj80p")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

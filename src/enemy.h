@@ -1,25 +1,24 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#ifndef ENEMY_H
+#define ENEMY_H
 
 #include <godot_cpp/classes/character_body2d.hpp>
 
 namespace godot {
 
-class Player : public  CharacterBody2D{
-    GDCLASS(Player, CharacterBody2D)
+class Enemy : public  CharacterBody2D{
+    GDCLASS(Enemy, CharacterBody2D)
 
 private:
     double speed;
+    Vector2 player_position;
 
 protected:
     static void _bind_methods();
 
 public:
-    Player();
-    ~Player();
+    Enemy();
+    ~Enemy();
 
-    void _ready();
-    void _on_timeout();
     void _physics_process(double delta);
 };
 
